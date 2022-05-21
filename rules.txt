@@ -7,3 +7,6 @@ Hosts1024|https://raw.githubusercontent.com/Goooler/1024_hosts/master/hosts
 AdWars|https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
 StevenBlack|https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 Yhosts|https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts.txt
+Neodevhost|https://raw.githubusercontent.com/neodevpro/neodevhost/master/adblocker
+CatsTeam|https://raw.githubusercontent.com/Cats-Team/AdRules/main/adblock+adguard.txt
+DoingDog|https://raw.githubusercontent.com/DoingDog/XXKiller/main/w.txt
