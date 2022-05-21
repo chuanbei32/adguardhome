@@ -1,11 +1,11 @@
 !
-! Title: ADblockfilters
-! Description: Adblock DNS Filters
+! Title: adunblockfilters
+! Description: adunblockfilters
 ! Homepage: https://github.com/chuanbei32/adguardhome
-! Source: https://raw.githubusercontent.com/chuanbei32/adguardhome/mian/adblockfilters.txt
-! Version: 20220521200516
-! Last modified: 2022/05/21 20:05:16
-! Count: 461644
+! Source: https://raw.githubusercontent.com/chuanbei32/adguardhome/mian/adunblockfilters.txt
+! Version: 20220521201253
+! Last modified: 2022/05/21 20:12:53
+! Count: 18549
 !
 @@$csp=worker-src 'none',domain=uptostream.com
 @@$domain=avgle.com,webrtc,websocket! EasyPrivacy
