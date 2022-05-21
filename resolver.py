@@ -12,10 +12,10 @@ class Resolver(object):
                 return True
             return False
 
-        blackList = []
-        whiteList = []
+        blockList = []
+        unblockList = []
         if not os.path.exists(self.__fileName):
-            return blackList, whiteList
+            return blockList, unblockList
         with open(self.__fileName, "r") as f:
             for line in f:
                 # 去掉换行符
@@ -32,17 +32,17 @@ class Resolver(object):
                 # ||
                 if match('^\|\|.*', line):
                     #print(line)
-                    blackList.append(line)
+                    blockList.append(line)
                     continue
                 # /REGEX/
                 if match('^/.*', line):
                     #print(line)
-                    blackList.append(line)
+                    blockList.append(line)
                     continue
                 # @@
                 if match('^@@.*', line):
                     #print(line)
-                    whiteList.append(line)
+                    unblockList.append(line)
                     continue
 
                 # @ 注释
@@ -61,13 +61,13 @@ class Resolver(object):
                     if domain in ['localhost', 'localhost.localdomain', 'local', '0.0.0.0']:
                         continue
                     domain = '||%s^'%(domain)
-                    blackList.append(domain)
+                    blockList.append(domain)
                     continue
 
                 # 过滤无效的hosts
                 if line.replace(' ', '') in ['::1localhost','255.255.255.255broadcasthost','::1ip6-localhost','::1ip6-loopback','fe80::1%lo0localhost','ff00::0ip6-localnet','ff00::0ip6-mcastprefix','ff02::1ip6-allnodes','ff02::2ip6-allrouters','ff02::3ip6-allhosts','255.255.255.255\tbroadcasthost']:
                     continue
 
-                blackList.append(line)
+                blockList.append(line)
                 pass
-        return blackList, whiteList
+        return blockList, unblockList
