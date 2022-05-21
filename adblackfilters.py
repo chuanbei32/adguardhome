@@ -67,7 +67,7 @@ def Entry():
         blackList += L1
         whiteList += L2
 
-    CreatFiters(blackList, whiteList, pwd + '/adblacklist.txt')
+    CreatFiters(blackList, whiteList, pwd + '/adblackfilters.txt')
 
 if __name__ == '__main__':
     Entry()
