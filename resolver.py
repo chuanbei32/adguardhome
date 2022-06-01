@@ -16,6 +16,7 @@ class Resolver(object):
         unblockList = []
         if not os.path.exists(self.__fileName):
             return blockList, unblockList
+
         with open(self.__fileName, "r") as f:
             for line in f:
                 # 去掉换行符
@@ -69,5 +70,4 @@ class Resolver(object):
                     continue
 
                 blockList.append(line)
-                pass
         return blockList, unblockList

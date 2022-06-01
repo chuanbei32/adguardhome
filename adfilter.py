@@ -8,8 +8,8 @@ from resolver import Resolver
 def GetRuleList(ruleFile):
     ruleList = []
     with open(ruleFile, "r") as f:
-        for lines in f:
-            line = lines.replace('\n', '').replace('\r', '')
+        for line in f:
+            line = line.replace('\n', '').replace('\r', '')
             if len(line) and not re.match('#', line):
                 rule = line.split('|')
                 ruleList.append([rule[0], rule[1]])
